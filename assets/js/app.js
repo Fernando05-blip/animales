@@ -33,8 +33,8 @@ function cracionAnimal(nombre, edad, comentarios) {
   }
 }
 
-function generarCardAnimales(){
-    animalesCards.innerHTML = '';
+function crearCard(){
+    animalesCards.innerHTML = ''; // limpiar
     arrayInstancia.forEach((element, index) => {
         animalesCards.innerHTML += 
         `<div class="col">
@@ -68,27 +68,27 @@ document.addEventListener("DOMContentLoaded", function() {
     // validaciones 
 
     if (animal.selectedIndex === 0) {
-      alert('Debes elegir un animal')
+      alert('No has elegido un animal')
       return
     }
 
     if (edad.selectedIndex === 0) {
-      alert('Debes elegir un rango de edad')
+      alert('No has elegido un rango de edad')
       return
     }
     if (comentarios.value.trim() === "") {
-      alert('Debes escribir un comentario')
+      alert('No has escrito un comentario')
       return
     }
 
-    //instanciar clase y almacenar el animal en un arreglo
+    //añadir animal a array e instanciar
 
-    let creado = cracionAnimal(animal.value, edad.value, comentarios.value)
-    arrayInstancia.push(creado)
+    let crear = cracionAnimal(animal.value, edad.value, comentarios.value)
+    arrayInstancia.push(crear)
 
-    //crear animales en card y pintarlo en plataforma
+    //lanzar funcion
 
-    generarCardAnimales()
+    crearCard()
 
     //limpiar formulario
 

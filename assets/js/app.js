@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     const imagenURL = arrayAnimales.find(item => item.name === animal.value)?.imagen;
     if (imagenURL) {
-      preview.innerHTML = `<img src="./assets/imgs/${imagenURL}" class="card-img-top" style="min-width:100%, height:auto" alt="${animal.value}">`
+      preview.innerHTML = `<img src="./assets/imgs/${imagenURL}" class="card-img-top" style="min-width:100%;height:auto" alt="${animal.value}">`
     } else {
       preview.innerHTML = ''
     }
